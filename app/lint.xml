@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="MissingTranslation" severity="ignore" />
+    <issue id="ContentDescription" severity="ignore" />
+    <issue id="MissingDefaultResource" severity="ignore" />
+    <issue id="VectorPath" severity="ignore" />
+    <issue id="UnusedResources">
+        <ignore path="res/values/strings.xml" />
+        <ignore path="res/values/stateful_layout_styles.xml" />
+    </issue>
+    <issue id="Typos">
+        <ignore path="res/values/strings.xml" />
+    </issue>
+    <issue id="ButtonCase">
+        <ignore path="res/values/strings.xml" />
+    </issue>
+    <issue id="VisibleForTests" severity="error" />
+</lint>
