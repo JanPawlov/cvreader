@@ -2,6 +2,7 @@ package com.triive.cvreader.ui.browser
 
 import android.os.Bundle
 import android.view.View
+import androidx.transition.Fade
 import androidx.transition.TransitionSet
 import com.triive.cvreader.R
 import com.triive.cvreader.ui.BaseFragment
@@ -19,6 +20,8 @@ class BrowserFragment : BaseFragment() {
 
     init {
         sharedElementEnterTransition = TransitionSet().default()
+        enterTransition = Fade()
+        exitTransition = Fade()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -40,6 +43,6 @@ class BrowserFragment : BaseFragment() {
     }
 
     companion object {
-        fun creator() = ::BrowserFragment
+        fun creator(): () -> BrowserFragment = ::BrowserFragment
     }
 }

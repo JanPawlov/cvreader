@@ -25,16 +25,16 @@ data class Resume(
             position = "Android Developer"
         )
         private val mock2 = Resume(
-            firstName = "John2",
-            lastName = "Doe2",
+            firstName = "John",
+            lastName = "Doe",
             photo = "https://media.gettyimages.com/photos/portrait-of-smiling-young-man-wearing-eyeglasses-picture-id985138634?s=612x612",
-            position = "Android Developer2"
+            position = "Android Developer"
         )
         private val mock3 = Resume(
-            firstName = "John3",
-            lastName = "Doe3",
+            firstName = "John",
+            lastName = "Doe",
             photo = "https://media.gettyimages.com/photos/portrait-of-smiling-mid-adult-man-wearing-tshirt-picture-id985138674?s=612x612",
-            position = "Android Developer3"
+            position = "Android Developer"
         )
         val mockedResumes = listOf(mock, mock2, mock3)
     }
