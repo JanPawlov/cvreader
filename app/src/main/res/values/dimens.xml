@@ -5,4 +5,6 @@
     <dimen name="listImageSize">64dp</dimen>
 
     <dimen name="marginDefault">8dp</dimen>
+
+    <dimen name="detailsImageSize">256dp</dimen>
 </resources>

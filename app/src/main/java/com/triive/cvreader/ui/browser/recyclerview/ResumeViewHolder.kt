@@ -13,10 +13,13 @@ class ResumeViewHolder private constructor(override val containerView: View) : B
 
     constructor(parent: ViewGroup) : this(parent.inflate(R.layout.item_list_resume))
 
-    override fun bind(item: Resume, onClick: ((Resume) -> Unit)?) {
+    override fun bind(item: Resume, onClick: ((Resume, transactionViews: List<View>) -> Unit)?) {
+        itemResumeFullName.transitionName = "${item.hashCode()}${item.firstName}${item.lastName}"
+        itemResumePosition.transitionName = "${item.hashCode()}${item.position}"
+        itemResumePhoto.transitionName = "${item.hashCode()}${item.photo}"
         itemResumeFullName.text = "${item.firstName} ${item.lastName}"
         itemResumePosition.text = item.position
         itemResumePhoto.loadWithGlide(item.photo)
-        containerView.setOnClickListener { onClick?.invoke(item) }
+        containerView.setOnClickListener { onClick?.invoke(item, listOf(itemResumeFullName, itemResumePosition, itemResumePhoto)) }
     }
 }

@@ -1,15 +1,15 @@
 package com.triive.cvreader.ui.details
 
-import com.triive.cvreader.model.Resume
+import android.view.View
 import com.triive.cvreader.navigation.NavDispatcher
 import com.triive.cvreader.ui.BaseViewModel
+import com.triive.cvreader.utils.SafeLiveData
 import kotlinx.coroutines.CoroutineDispatcher
 
 class ResumeDetailsViewModel(
     backgroundDispatcher: CoroutineDispatcher,
-    private val navDispatcher: NavDispatcher,
-    private val resume: Resume
-) : BaseViewModel(backgroundDispatcher) {
+    private val navDispatcher: NavDispatcher
+) : BaseViewModel(backgroundDispatcher), SafeLiveData.LiveDataContainer {
 
-    fun navigateBack() = navDispatcher.navigateBack(this)
+    fun navigateBack(transitionsViews: List<View>? = null) = navDispatcher.navigateBack(this, transitionsViews)
 }
