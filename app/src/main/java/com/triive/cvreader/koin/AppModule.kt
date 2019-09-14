@@ -2,6 +2,9 @@ package com.triive.cvreader.koin
 
 import com.triive.cvreader.CVApplication
 import com.triive.cvreader.MainViewModel
+import com.triive.cvreader.api.ApiFactory
+import com.triive.cvreader.api.ApiRepository
+import com.triive.cvreader.api.RetrofitInterceptor
 import com.triive.cvreader.navigation.NavDispatcher
 import kotlinx.coroutines.Dispatchers
 import org.koin.android.experimental.dsl.viewModel
@@ -25,4 +28,7 @@ private val appModule = module {
     single { Dispatchers.IO }
     single<NavDispatcher>()
     viewModel<MainViewModel>()
+    single<RetrofitInterceptor>()
+    single<ApiFactory>()
+    single { ApiRepository(get()) }
 }
