@@ -1,7 +1,7 @@
 package com.triive.cvreader
 
 import android.app.Application
-import com.triive.cvreader.extensions.CrashReportingTree
+import com.triive.cvreader.utils.extensions.CrashReportingTree
 import com.triive.cvreader.koin.startKoin
 import timber.log.Timber
 

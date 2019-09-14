@@ -1,6 +1,6 @@
 package com.triive.cvreader.api
 
-import com.triive.cvreader.extensions.awaitOutcome
+import com.triive.cvreader.utils.extensions.awaitOutcome
 import okhttp3.ResponseBody
 
 class ApiRepository(private val apiFactory: ApiFactory) {

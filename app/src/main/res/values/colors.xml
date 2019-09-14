@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">@android:color/white</color>
+    <color name="colorPrimaryDark">@android:color/black</color>
+    <color name="colorOnPrimary">#673AB7</color>
+    <color name="colorOnSurface">#FF9800</color>
+    <color name="colorAccent">#ffec7b15</color>
+    <color name="colorSurface">@android:color/transparent</color>
+    <color name="strokeColor">#ffe5e5e5</color>
+    <color name="iconStrokeColor">#8C8C8C</color>
+    <color name="burgundy">#ff901e56</color>
+    <color name="colorBackground">@android:color/white</color>
+    <color name="defaultTextColor">#ff8c8c8c</color>
 </resources>

@@ -2,9 +2,8 @@ package com.triive.cvreader
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.triive.cvreader.extensions.observe
+import com.triive.cvreader.utils.extensions.observe
 import com.triive.cvreader.ui.BaseFragment
-import com.triive.cvreader.ui.home.HomeFragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -30,8 +29,6 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         viewModel.navigationChanges
             .observe(this) { it.executeIfNotConsumed(this) }
     }
-
-    fun getNestedFragmentManager() = supportFragmentManager.findFragmentById(R.id.container)?.childFragmentManager
 
     private fun getCurrentFragment() = supportFragmentManager.findFragmentById(R.id.container) as? BaseFragment
 

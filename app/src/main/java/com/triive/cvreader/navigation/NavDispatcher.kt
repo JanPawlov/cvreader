@@ -5,8 +5,8 @@ import androidx.fragment.app.commitNow
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.triive.cvreader.MainActivity
-import com.triive.cvreader.extensions.removeOldFragments
-import com.triive.cvreader.extensions.swap
+import com.triive.cvreader.utils.extensions.removeOldFragments
+import com.triive.cvreader.utils.extensions.swap
 import kotlinx.coroutines.*
 import kotlin.coroutines.resume
 

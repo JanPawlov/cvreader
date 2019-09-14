@@ -1,6 +1,7 @@
 package com.triive.cvreader.navigation
 
 import com.triive.cvreader.R
+import com.triive.cvreader.model.Resume
 
 sealed class NavRequest {
     abstract val tag: String
@@ -12,5 +13,6 @@ sealed class NavRequest {
         override val containerId = R.id.container
 
         object Home : Main("home")
+        data class ResumeDetails(val resume: Resume): Main(resume.photo)
     }
 }

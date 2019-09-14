@@ -1,4 +1,4 @@
-package com.triive.cvreader.extensions
+package com.triive.cvreader.utils.extensions
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData

@@ -5,11 +5,15 @@ import com.triive.cvreader.MainViewModel
 import com.triive.cvreader.api.ApiFactory
 import com.triive.cvreader.api.ApiRepository
 import com.triive.cvreader.api.RetrofitInterceptor
+import com.triive.cvreader.model.Resume
 import com.triive.cvreader.navigation.NavDispatcher
+import com.triive.cvreader.ui.browser.BrowserViewModel
+import com.triive.cvreader.ui.details.ResumeDetailsViewModel
 import kotlinx.coroutines.Dispatchers
 import org.koin.android.experimental.dsl.viewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
+import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 import org.koin.dsl.module
@@ -27,8 +31,10 @@ fun CVApplication.startKoin() {
 private val appModule = module {
     single { Dispatchers.IO }
     single<NavDispatcher>()
-    viewModel<MainViewModel>()
     single<RetrofitInterceptor>()
     single<ApiFactory>()
     single { ApiRepository(get()) }
+    viewModel<MainViewModel>()
+    viewModel<BrowserViewModel>()
+    viewModel { (resume: Resume) -> ResumeDetailsViewModel(get(), get(), resume) }
 }

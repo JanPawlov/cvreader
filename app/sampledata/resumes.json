@@ -1,0 +1,17 @@
+{
+  "comment": "Sample resume data",
+  "resumes": [
+    {
+      "position": "FullStack Developer"
+    },
+    {
+      "position": "Android Developer"
+    },
+    {
+      "position": "iOS Developer"
+    },
+    {
+      "position": "Backend Developer"
+    }
+  ]
+}

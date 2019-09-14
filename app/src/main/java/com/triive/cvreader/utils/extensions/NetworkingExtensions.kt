@@ -1,4 +1,4 @@
-package com.triive.cvreader.extensions
+package com.triive.cvreader.utils.extensions
 
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonDataException

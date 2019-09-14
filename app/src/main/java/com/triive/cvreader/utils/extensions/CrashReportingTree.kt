@@ -1,4 +1,4 @@
-package com.triive.cvreader.extensions
+package com.triive.cvreader.utils.extensions
 
 import com.crashlytics.android.Crashlytics
 import timber.log.Timber

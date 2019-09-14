@@ -1,4 +1,4 @@
-package com.triive.cvreader.extensions
+package com.triive.cvreader.utils.extensions
 
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
