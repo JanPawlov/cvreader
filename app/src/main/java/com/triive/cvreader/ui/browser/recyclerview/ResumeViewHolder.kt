@@ -15,6 +15,8 @@ class ResumeViewHolder private constructor(override val containerView: View) : B
 
     override fun bind(item: Resume, onClick: ((Resume) -> Unit)?) {
         itemResumeFullName.text = "${item.firstName} ${item.lastName}"
+        itemResumePosition.text = item.position
         itemResumePhoto.loadWithGlide(item.photo)
+        containerView.setOnClickListener { onClick?.invoke(item) }
     }
 }

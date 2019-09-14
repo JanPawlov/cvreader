@@ -12,8 +12,6 @@ class BrowserViewModel(
     private val navDispatcher: NavDispatcher
 ) : BaseViewModel(backgroundDispatcher) {
 
-    fun navigateBack() = navDispatcher.navigateBack(this)
-
     fun onResumeClick(resume: Resume) = launch {
         navDispatcher.navigate(NavRequest.Main.ResumeDetails(resume))
     }

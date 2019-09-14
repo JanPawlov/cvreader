@@ -13,5 +13,7 @@ data class Resume(
     @Json(name = "last_name")
     val lastName: String,
     @Json(name = "photo")
-    val photo: String
+    val photo: String,
+    @Json(name = "position")
+    val position: String
 ) : Parcelable
