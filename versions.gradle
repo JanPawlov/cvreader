@@ -22,5 +22,6 @@ ext.versions = [
         retrofit              : "2.6.0",
         okhttp                : "3.14.0",
         glide                 : "4.9.0",
-        statefulLayout        : "1.2.1"
+        statefulLayout        : "1.2.1",
+        threetenabp           : "1.2.1",
 ]

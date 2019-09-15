@@ -2,6 +2,7 @@ package com.triive.cvreader.api
 
 import com.squareup.moshi.Moshi
 import com.triive.cvreader.BuildConfig
+import com.triive.cvreader.api.response.adapter.LocalDateTimeAdapter
 import com.triive.cvreader.api.response.adapter.ResumeListAdapter
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -30,7 +31,14 @@ class ApiFactory : KoinComponent {
         .build()
         .create(CvReaderAPI::class.java)
 
-    private fun provideConverterFactory(): MoshiConverterFactory = MoshiConverterFactory.create(Moshi.Builder().add(ResumeListAdapter()).build())
+    private fun provideConverterFactory(): MoshiConverterFactory {
+        val moshi = Moshi.Builder()
+            .add(ResumeListAdapter())
+            .add(LocalDateTimeAdapter())
+            .build()
+
+        return MoshiConverterFactory.create(moshi)
+    }
 
     private fun provideHttpClient() = OkHttpClient.Builder()
         .addNetworkInterceptor(interceptor)

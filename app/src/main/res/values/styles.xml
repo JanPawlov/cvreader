@@ -23,4 +23,9 @@
         <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:textSize">@dimen/headerTextSize</item>
     </style>
+
+    <style name="Header.Large" parent="Header">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/headerLarge</item>
+    </style>
 </resources>

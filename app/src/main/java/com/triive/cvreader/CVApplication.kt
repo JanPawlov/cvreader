@@ -1,8 +1,9 @@
 package com.triive.cvreader
 
 import android.app.Application
-import com.triive.cvreader.utils.extensions.CrashReportingTree
+import com.jakewharton.threetenabp.AndroidThreeTen
 import com.triive.cvreader.koin.startKoin
+import com.triive.cvreader.utils.extensions.CrashReportingTree
 import timber.log.Timber
 
 class CVApplication: Application() {
@@ -11,6 +12,7 @@ class CVApplication: Application() {
         super.onCreate()
         startKoin()
         initTimber()
+        AndroidThreeTen.init(this)
     }
 
     @Suppress("ConstantConditionIf")

@@ -1,9 +1,9 @@
 package com.triive.cvreader
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.triive.cvreader.utils.extensions.observe
+import androidx.appcompat.app.AppCompatActivity
 import com.triive.cvreader.ui.BaseFragment
+import com.triive.cvreader.utils.extensions.observe
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/detailsContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/detailsImageView"
@@ -25,7 +25,7 @@
 
         <TextView
             android:id="@+id/detailsFullName"
-            style="@style/Header"
+            style="@style/Header.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginDefault"
@@ -43,5 +43,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/detailsFullName"
             tools:text="@sample/resumes.json/resumes/position" />
+
+        <LinearLayout
+            android:id="@+id/additionalContentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginDefault"
+            android:layout_marginBottom="@dimen/marginDefault"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailsPosition" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

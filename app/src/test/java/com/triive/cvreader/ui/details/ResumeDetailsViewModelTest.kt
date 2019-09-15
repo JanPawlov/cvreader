@@ -37,7 +37,7 @@ class ResumeDetailsViewModelTest {
 
     @Before
     fun setUp() {
-        viewModel = ResumeDetailsViewModel(coroutineDispatcher, navDispatcher, resume)
+        viewModel = ResumeDetailsViewModel(coroutineDispatcher, navDispatcher)
     }
 
     @Test

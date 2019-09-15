@@ -1,4 +1,11 @@
 <resources>
     <string name="fetch_error">Fetching CVs failed.</string>
     <string name="retry">Retry</string>
+    <string name="profile">Profile</string>
+    <string name="languages">Languages</string>
+    <string name="employment">Employment</string>
+    <string name="skills">Skills</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="position">Position</string>
+    <string name="responsibilities">Responsibilities:</string>
 </resources>

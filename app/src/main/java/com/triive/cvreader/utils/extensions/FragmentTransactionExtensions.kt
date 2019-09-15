@@ -3,7 +3,9 @@ package com.triive.cvreader.utils.extensions
 import android.view.View
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import androidx.transition.*
+import androidx.transition.ChangeBounds
+import androidx.transition.ChangeTransform
+import androidx.transition.TransitionSet
 import com.triive.cvreader.ui.BaseFragment
 import timber.log.Timber
 
