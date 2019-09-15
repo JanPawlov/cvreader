@@ -1,11 +1,14 @@
 package com.triive.cvreader.api
 
+import com.squareup.moshi.Moshi
 import com.triive.cvreader.BuildConfig
+import com.triive.cvreader.api.response.adapter.ResumeListAdapter
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 import retrofit2.Retrofit
+import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
 class ApiFactory : KoinComponent {
@@ -18,14 +21,16 @@ class ApiFactory : KoinComponent {
         }
     }
 
-    private val baseUrl = "https://google.com"
+    private val baseUrl = "https://api.github.com/"
 
     fun createApi(): CvReaderAPI = Retrofit.Builder()
         .baseUrl(baseUrl)
+        .addConverterFactory(provideConverterFactory())
         .client(provideHttpClient())
         .build()
         .create(CvReaderAPI::class.java)
 
+    private fun provideConverterFactory(): MoshiConverterFactory = MoshiConverterFactory.create(Moshi.Builder().add(ResumeListAdapter()).build())
 
     private fun provideHttpClient() = OkHttpClient.Builder()
         .addNetworkInterceptor(interceptor)
@@ -35,6 +40,6 @@ class ApiFactory : KoinComponent {
         .build()
 
     companion object {
-        private const val TIMEOUT_DEFAULT = 15L
+        private const val TIMEOUT_DEFAULT = 5L
     }
 }

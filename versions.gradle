@@ -21,5 +21,6 @@ ext.versions = [
         moshi                 : "1.8.0",
         retrofit              : "2.6.0",
         okhttp                : "3.14.0",
-        glide                 : "4.9.0"
+        glide                 : "4.9.0",
+        statefulLayout        : "1.2.1"
 ]

@@ -33,6 +33,6 @@ private val appModule = module {
     single<ApiFactory>()
     single { ApiRepository(get()) }
     viewModel { MainViewModel(get(), get()) }
-    viewModel { BrowserViewModel(get(), get()) }
+    viewModel { BrowserViewModel(get(), get(),get()) }
     viewModel { ResumeDetailsViewModel(get(), get()) }
 }

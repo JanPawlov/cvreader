@@ -1,2 +1,4 @@
 <resources>
+    <string name="fetch_error">Fetching CVs failed.</string>
+    <string name="retry">Retry</string>
 </resources>

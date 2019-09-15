@@ -9,8 +9,8 @@
     <init> (...);
 }
 
--keep class com.triive.api.model.request.** { *; }
--keep class com.triive.api.model.response.** { *; }
+-keep class com.triive.cvreader.model.** { *; }
+-keep class com.triive.cvreader.api.response.** { *; }
 -keepclassmembers enum * {
     public *;
 }

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.triive.cvreader">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name="com.triive.cvreader.CVApplication"
         android:allowBackup="false"
